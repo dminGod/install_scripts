@@ -1,6 +1,6 @@
 # Install common stuff
 echo -e "\n\n Installing common stuff.."
-yum install -y iproute openssh-* initscripts vim wget curl
+yum install -y iproute openssh-* initscripts vim wget curl lynx telnet nc
 
 cd /opt
 
