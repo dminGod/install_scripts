@@ -35,6 +35,8 @@ $CASSANDRA_PATH/bin/cassandra -p $CASSANDRA_PATH/cassandra.pid
 echo -e "\n\n Check cassandra service"
 service cassandra status
 
+
+export CASSANDRA_PATH=/opt/cassandra
 export PATH=$PATH:$CASSANDRA_PATH/bin
 
 
@@ -52,5 +54,11 @@ echo "CREATE TABLE emp(emp_id int PRIMARY KEY, emp_name text, emp_city text, emp
 
 echo "INSERT INTO emp (emp_id, emp_name, emp_city, emp_phone, emp_sal) VALUES(1,'ram', 'Hyderabad', 9848022338, 50000);"
 
+echo "SELECT * FROM emp;"
 
+echo "\n\nSleeping for 10 secs, copy the stuff above..."
+sleep(10)
+cqlsh
+
+sleep(5)
 cqlsh
