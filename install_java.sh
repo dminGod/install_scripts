@@ -1,10 +1,24 @@
 # Install common stuff
-echo -e "\n\n Installing common stuff.."
-yum install -y iproute openssh-* initscripts vim wget curl lynx telnet nc
+echo -e "\n\n Installing figlet.."
+yum install -y wget
 
 cd /opt
 
-echo -e "\n\n Get Java and extract it... \n\n"
+wget http://dl.fedoraproject.org/pub/epel/7/x86_64/f/figlet-2.2.5-9.el7.x86_64.rpm
+rpm -ivh figlet-2.2.5-9.el7.x86_64.rpm
+
+clear
+figlet -f banner "Figlet Installed :)"
+figlet -f small "Installing common utilities..."
+
+sleep 1
+
+yum install -y iproute openssh-* initscripts vim wget curl lynx telnet nc nmap less
+
+clear
+figlet "Get Java and Install"
+sleep 1
+
 # Get Java tar gz :
 wget --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u111-b14/jdk-8u111-linux-x64.tar.gz jdk-8u111-linux-x64.tar.gz
 
@@ -13,6 +27,9 @@ tar -zxvf jdk-8u111-linux-x64.tar.gz
 
 cd jdk1.8.0_111
 
+clear 
+
+figlet "Java Alternatives Setup"
 # Alternatives install
 echo -e "\n\n Alternatives Setup..."
 alternatives --install /usr/bin/java java /opt/jdk1.8.0_111/bin/java 1
@@ -31,6 +48,9 @@ export PATH=$PATH:/opt/jdk1.8.0_111/bin:/opt/jdk1.8.0_111/jre/bin
 echo "export JAVA_HOME=/opt/jdk1.8.0_111" >> /etc/environment
 echo "export JRE_HOME=/opt/jdk1.8.0_111/jre" >> /etc/environment
 echo "export PATH=\$PATH:/opt/jdk1.8.0_111/bin:/opt/jdk1.8.0_111/jre/bin" >> /etc/environment
+
+clear 
+figlet "Done, all good? check" 
 
 # Show stuff
 echo -e "\n\n Java Version:"
