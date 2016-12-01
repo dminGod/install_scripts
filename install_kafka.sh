@@ -13,6 +13,8 @@ tar -zxvf kafka_2.11-0.9.0.1.tgz
 # Rename folder
 mv kafka_2.11-0.9.0.1 kafka
 
+cd kafka
+
 clear
 
 figlet -f small "Start Zookeeper"
@@ -29,11 +31,18 @@ figlet -f small "Change stuff if you want..."
 echo -e "Change the memory allocation to kafka you want from \n vim bin/kafka-server-start.sh \n"
 echo -e 'Change the line :  export KAFKA_HEAP_OPTS="-Xmx1G -Xms1G" \n\n'
 
+read -p "Press any key to continue"
+
+clear
 
 figlet -f small 'Starting Kafka Server'
 
 # Start Kafka Server 
 bin/kafka-server-start.sh config/server.properties &
+
+
+read -p "Press any key to continue"
+clear
 
 figlet -f small "Testing stuff"
 
