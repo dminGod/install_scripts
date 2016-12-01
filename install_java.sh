@@ -16,7 +16,7 @@ sleep 1
 yum install -y iproute openssh-* initscripts vim wget curl lynx telnet nc nmap less
 
 clear
-figlet "Get Java and Install"
+figlet -f small "Get Java & Install"
 sleep 1
 
 # Get Java tar gz :
@@ -29,7 +29,7 @@ cd jdk1.8.0_111
 
 clear 
 
-figlet "Java Alternatives Setup"
+figlet  -f small "Java Alternatives Setup"
 # Alternatives install
 echo -e "\n\n Alternatives Setup..."
 alternatives --install /usr/bin/java java /opt/jdk1.8.0_111/bin/java 1
@@ -50,7 +50,7 @@ echo "export JRE_HOME=/opt/jdk1.8.0_111/jre" >> /etc/environment
 echo "export PATH=\$PATH:/opt/jdk1.8.0_111/bin:/opt/jdk1.8.0_111/jre/bin" >> /etc/environment
 
 clear 
-figlet "Done, all good? check" 
+figlet  -f small "Done, all good? check" 
 
 # Show stuff
 echo -e "\n\n Java Version:"
