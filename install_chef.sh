@@ -39,8 +39,7 @@ mv /opt/unoCookbooks/cookbooks/* /root/chef-repo/cookbooks/
 
 rm -rf /opt/unoCookbooks/
 
-
-
+service sshd start
 
 
 
