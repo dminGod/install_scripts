@@ -7,6 +7,9 @@ mkdir rpm
 
 cd /opt/rpm
 
+echo -e "get the wget the wget, get"
+yum install -y wget
+
 echo -e "Getting installing figlet"
 wget http://dl.fedoraproject.org/pub/epel/7/x86_64/f/figlet-2.2.5-9.el7.x86_64.rpm
 rpm -ivh figlet-2.2.5-9.el7.x86_64.rpm
@@ -25,7 +28,7 @@ figlet -f small "Chef Server"
 wget https://packages.chef.io/stable/el/7/chef-server-core-12.6.0-1.el7.x86_64.rpm
 rpm -ivh chef-server-core-12.6.0-1.el7.x86_64.rpm
 
-
+cd /root
 chef generate repo chef-repo
 
 cd /opt
