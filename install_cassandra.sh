@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo -e "\n\n Create /opt/cassandra \n\n";
 cd /opt
 
@@ -36,8 +38,7 @@ echo -e "\n\n Check cassandra service"
 service cassandra status
 
 
-export CASSANDRA_PATH=/opt/cassandra
-export PATH=$PATH:$CASSANDRA_PATH/bin
+export CASSANDRA_PATH=/opt/cassandra; export PATH=$PATH:$CASSANDRA_PATH/bin
 
 
 echo -e "\n\n pushing you into cqlsh -- see if it works"

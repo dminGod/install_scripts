@@ -1,4 +1,6 @@
+#!/bin/bash
 
+# https://www.vultr.com/docs/how-to-install-apache-kafka-on-centos-7
 
 cd /opt
 
