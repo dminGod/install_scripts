@@ -35,7 +35,7 @@ cd /opt
 
 git clone https://github.com/aksh-4793/unoCookbooks.git
 
-mv /opt/unoCookbooks/cookbooks/* /root/chef-repo/
+mv /opt/unoCookbooks/cookbooks/* /root/chef-repo/cookbooks/
 
 rm -rf /opt/unoCookbooks/
 
