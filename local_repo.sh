@@ -14,4 +14,4 @@ EOF
 
 yum clean all
 
-yum reposlist
+yum repolist
