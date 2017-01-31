@@ -1,0 +1,1 @@
+docker rm -f `docker ps -a | head -2 | tail -1 | gawk '{print $1}'`
