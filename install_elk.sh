@@ -35,8 +35,10 @@ enabled=1
 ' | sudo tee /etc/yum.repos.d/logstash.repo
 
 
+wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm -O /tmp/epel-release.rpm
+
 # Add epel release
-sudo yum -y epel-release
+sudo yum install -y /tmp/epel-release.rpm
 
 
 # Install 
