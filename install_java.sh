@@ -13,7 +13,7 @@ figlet -f small "Installing common utilities..."
 
 sleep 1
 
-yum install -y iproute openssh-* initscripts vim wget curl lynx telnet nc nmap less wget man
+yum install -y iproute openssh-* initscripts vim wget curl lynx telnet nc nmap less wget man net-tools
 
 clear
 figlet -f small "Get Java & Install"
